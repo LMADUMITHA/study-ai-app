@@ -1,0 +1,32 @@
+/* Orb container takes full-screen */
+.orb-container {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* The glowing orb */
+.orb {
+  position: absolute;
+  width: 900px;
+  height: 900px;
+  background: radial-gradient(circle at 30% 30%, #00e1ff, #007bff, #ff4d6d, #ffcc00);
+  filter: blur(120px);
+  opacity: 0.85;
+  border-radius: 50%;
+  animation: float 14s ease-in-out infinite alternate;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes float {
+  0% {
+    transform: translate(-50%, -48%);
+  }
+  100% {
+    transform: translate(-50%, -52%);
+  }
+}
